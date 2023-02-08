@@ -1,0 +1,102 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background: #20262E;
+	color: #fff;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+}
+
+.container-pomodoro {
+	padding: 20px;
+    margin: 50px 0 0 0;
+    height: 80vh;
+	width: 600px;
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+.header-pomodoro {
+	background: #000;
+    border-radius: 8px;
+    text-align: center;
+    font-family: monospace, sans-serif;
+    padding: 30px;
+}
+
+.header-pomodoro h1 {
+	font-size: 50px;
+	letter-spacing: 4px;
+}
+
+#app {
+    font-size: 24px;
+}
+
+.tasks-container {
+    padding: 20px 0 0 0;
+}
+
+#form {
+    display: flex;
+    justify-content: space-between;
+}
+
+#itTask {
+    width: 75%;
+    background: #ededed;
+    border: none;
+    border-radius: 930px;
+    height: 35px;
+    padding: 5px 15px;
+    font-size: 20px;
+}
+
+#bAdd {
+    width: 19%;
+    height: 45px;
+    padding: 5px;
+    border: none;
+    border-radius: 930px;
+    background: #EDDBC7;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 16px;
+}
+#bAdd:hover{
+	cursor: pointer;
+}
+
+#tasks {
+    border-top: solid 1px #BDCDD6;
+    margin: 20px 0;
+    /* padding: 20px 0 0 0; */
+    font-size: 20px;
+    font-family: cursive;
+    line-height: 50px;
+}
+
+.start-button {
+    color: #fff;
+    width: 115px;
+    height: 30px;
+    border-radius: 930px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    background: #567189;
+}
+
+.start-button:hover{
+	cursor: pointer;
+}
+
+.item-task {
+	display: flex;
+    justify-content: space-between;
+}
