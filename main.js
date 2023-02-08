@@ -3,11 +3,13 @@ let time = 0;
 let timer = null;
 let timerBreak = null;
 let current = null;
+let alarm = new Audio('alarm.mp3');
 
 const bAdd = document.querySelector('#bAdd');
 const itTask = document.querySelector('#itTask');
 const form = document.querySelector('#form');
 const taskName = document.querySelector('#time #taskName');
+const btnStopAlarm = document.querySelector('#btnAlarm');
 
 renderTime();
 renderTasks();
@@ -92,11 +94,12 @@ function timerHandler(id){
 		timer = null;
 		renderTasks();
 		startBreak();
+		alertTime();
 	}
 }
 
 function startBreak() {
-	time = 5;
+	time = 10;
 	taskName.textContent = 'Break';
 	renderTime();
 	timerBreak = setInterval(() => {
@@ -116,6 +119,7 @@ function timerBreakHandler() {
 		timerBreak = null;
 		taskName.textContent = '';
 		renderTasks();
+		alertTime();
 	}
 }
 
@@ -130,4 +134,18 @@ function renderTime(){
 function markCompleted(id) {
 	const taskIndex = tasks.findIndex(task => task.id === id);
 	tasks[taskIndex].completed = true;
+}
+
+function alertTime() {
+	btnAlarm.classList.remove('none');
+	alarm.play();
+	stopAlertTime();
+}
+
+function stopAlertTime() {
+	btnStopAlarm.addEventListener('click', ()=> {
+		alarm.pause();
+		//alarm.currentTime(0);
+		btnAlarm.classList.add("none");
+	});
 }

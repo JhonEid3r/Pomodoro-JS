@@ -7,6 +7,10 @@ body {
 	color: #fff;
 }
 
+.none {
+    display: none;
+}
+
 .container {
     display: grid;
     place-items: center;
@@ -26,16 +30,21 @@ body {
     border-radius: 8px;
     text-align: center;
     font-family: monospace, sans-serif;
-    padding: 30px;
+    padding: 20px;
+    height: auto;
 }
 
 .header-pomodoro h1 {
-	font-size: 50px;
+	font-size: 30px;
 	letter-spacing: 4px;
 }
 
-#app {
-    font-size: 24px;
+#value {
+    font-size: 30px;
+}
+
+#taskName{
+    font-size: 20px;
 }
 
 .tasks-container {
@@ -99,4 +108,17 @@ body {
 .item-task {
 	display: flex;
     justify-content: space-between;
+}
+
+#btnAlarm {
+    color: #fff;
+    background: #FF6464;
+    border: none;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 930px;
+    margin-top: 10px;
+}
+#btnAlarm:hover{
+    cursor: pointer;
 }
